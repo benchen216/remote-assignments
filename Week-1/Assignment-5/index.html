@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function count(input) { // your code here
+        let count = {};
+        for(let i = 0; i < input.length; i++){
+            if(!count[input[i]]){
+                count[input[i]] = 1;
+            }else {
+                count[input[i]]+=1;
+            }
+        }
+        return count;
+    }
+    let input1 = ["a", "b", "c", "a", "c", "a", "x"];
+    console.log(count(input1));
+    // should print {a:3, b:1, c:2, x:1}
+    function groupByKey(input) { // your code here
+        let count = {};
+        for(let i = 0; i < input.length; i++){
+            if(!count[input[i].key]){
+                count[input[i].key] = input[i].value;
+            }else {
+                count[input[i].key]+=input[i].value;
+            }
+        }
+        return count;
+    }
+    let input2 = [
+        { key: "a", value: 3 },
+        { key: "b", value: 1 },
+        { key: "c", value: 2 },
+        { key: "a", value: 3 },
+        { key: "c", value: 5 },
+    ];
+    console.log(groupByKey(input2));
+</script>
+</html>

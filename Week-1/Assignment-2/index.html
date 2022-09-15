@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function countAandB(input) { // your code here
+        a_count = 0;
+        b_count = 0;
+        for (let i = 0; i < input.length; i++) {
+            if (input[i] === "a"){
+                a_count++;
+            }else if(input[i] === "b"){
+                b_count++;
+            }else{
+
+            }
+        }
+        if (a_count+b_count){
+            return (a_count+b_count)+" (" + a_count + "`a` letters and " + b_count + " ‘b’ letter)"
+        }else {
+            return "0"
+        }
+
+    }
+    function toNumber(input) { // your code here
+        output = [];
+        for (let i = 0; i < input.length; i++) {
+            output.push(input[i].charCodeAt(0)-96)
+        }
+        return output
+    }
+    let input1 = ['a', 'b', 'c', 'a', 'c', 'a', 'c'];
+    console.log(countAandB(input1)); // should print 4 (3 ‘a’ letters and 1 ‘b’ letter)
+    console.log(toNumber(input1)); // should print [1, 2, 3, 1, 3, 1, 3]
+    let input2 = ['e', 'd', 'c', 'd', 'e'];
+    console.log(countAandB(input2)); // should print 0 console.log(toNumber(input2)); // should print [5, 4, 3, 4, 5]
+
+</script>
+</html>
