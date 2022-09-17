@@ -7,26 +7,126 @@
     .flex-container {
       display: flex;
       align-items: stretch;
-      background-color: #f1f1f1;
       width: 1200px;
     }
 
     .flex-container > div {
-      background-color: DodgerBlue;
-      color: white;
-      margin: 10px;
+      background-color: #eeeeee;
+      color: black;
       text-align: center;
       line-height: 75px;
+      font-size: 20px;
+    }
+    .flex-item{
+      display: flex;
+    }
+    .flex-item > div{
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    .flex-welcome {
+      display: flex;
+      align-items: center;
+      width: 1200px;
+      line-height: 170px;
+    }
+    .flex-welcome > div {
+      background-color: #cfdcec;
+      text-align: center;
+      color: black;
+      font-size: 40px;
+    }
+    .flex-title{
+      display: flex;
+      text-align: center;
+      color: black;
       font-size: 30px;
+      width: 1200px;
+    }
+    .flex-content {
+      display: flex;
+
+      width: 1200px;
+      line-height: 170px;
+    }
+    .flex-content > div> div{
+      background-color: #8b98a8;
+      margin-bottom: 10px;
+      margin-right: 5px;
+      margin-left: 5px;
+      text-align: center;
+
+    }
+    .flex-btn{
+      display: flex;
+      width: 1200px;
+      line-height: 40px;
+    }
+    .flex-btn>div>div{
+      text-align: center;
+      background-color: #cfdcec;
+      vertical-align: text-top;
     }
   </style>
 </head>
 <body>
 
 <div class="flex-container">
-  <div style="flex-grow: 1">1</div>
-  <div style="flex-grow: 1">Logo</div>
-  <div style="flex-grow: 8">3</div>
+  <div style="flex-grow: 2">Website Title / Logo</div>
+  <div style="flex-grow: 9"></div>
+  <div style="flex-grow: 1" class="flex-item">
+    <div >
+      Item1
+    </div>
+    <div >
+      Item2
+    </div>
+    <div >
+      Item3
+    </div>
+    <div >
+      Item4
+    </div>
+  </div>
+</div>
+<div class="flex-welcome">
+  <div style="flex-grow: 12">
+    <p>Welcome Message</p>
+  </div>
+</div>
+<div class="flex-title" >
+  <div style="flex-grow: 12">
+    <p>Section Title</p>
+  </div>
+</div>
+
+<div class="flex-content">
+  <div style="flex-grow: 2">
+
+  </div>
+  <div style="flex-grow: 4">
+    <div>Content Box 1</div>
+    <div>Content Box 3</div>
+  </div>
+  <div style="flex-grow: 4">
+    <div>Content Box 2</div>
+    <div>Content Box 4</div>
+  </div>
+  <div style="flex-grow: 2">
+  </div>
+</div>
+
+<div class="flex-btn">
+  <div style="flex-grow: 6">
+
+  </div>
+  <div style="flex-grow: 2">
+    <div>Call to Action</div>
+  </div>
+  <div style="flex-grow: 6">
+
+  </div>
 </div>
 
 </body>
