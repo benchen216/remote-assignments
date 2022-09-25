@@ -5,10 +5,27 @@
     <title>Sum</title>
 </head>
 <body>
-<form action="/data" method="get">
-  <input name="number" value="">
-  <button>Submit</button>
-</form>
 
+<input name="number" value="" id="number">
+<button onclick="get_ans()">Submit</button>
+<div>
+    ans:
+</div>
+<div id="show_ans">
+
+</div>
+<script>
+    function get_ans(){
+        let params = document.getElementById("number").value;
+        let res = new XMLHttpRequest();
+        res.onreadystatechange = function () {
+         if(res.readyState === 4){
+          document.getElementById("show_ans").innerText = res.responseText;
+         }
+        };
+        res.open('GET',"data"+"?number="+params, true);
+        res.send();
+    }
+</script>
 </body>
 </html>
